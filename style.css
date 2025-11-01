@@ -1,0 +1,208 @@
+:root {
+  --color-principal: #00b4d8;
+  --color-secundario: #0077b6;
+  --fondo: #0a0a0a;
+  --texto: #f1f1f1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: var(--fondo);
+  color: var(--texto);
+  scroll-behavior: smooth;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  z-index: 100;
+}
+.logo {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5em;
+  color: var(--color-principal);
+}
+.logo span {
+  color: white;
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+.navbar a {
+  color: var(--texto);
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.navbar a:hover {
+  color: var(--color-principal);
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1519389950473-47ba0277781c') center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+.hero-content h1 {
+  font-size: 2.5em;
+  color: white;
+}
+.hero-content span {
+  color: var(--color-principal);
+}
+.hero-content p {
+  margin: 20px 0;
+}
+.btn {
+  background: var(--color-principal);
+  color: white;
+  padding: 10px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.btn:hover {
+  background: var(--color-secundario);
+}
+
+/* SERVICIOS */
+.servicios {
+  padding: 100px 50px;
+  background: #111;
+  text-align: center;
+}
+.servicios h2 {
+  margin-bottom: 40px;
+  font-size: 2em;
+  color: var(--color-principal);
+}
+.servicios-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+.servicio-card {
+  background: #1a1a1a;
+  padding: 30px;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+.servicio-card:hover {
+  transform: translateY(-10px);
+}
+.servicio-card img {
+  width: 70px;
+  margin-bottom: 15px;
+}
+
+/* NOSOTROS */
+.nosotros {
+  padding: 80px 50px;
+  background: #0f0f0f;
+  text-align: center;
+}
+
+/* PORTAFOLIO */
+.portafolio {
+  padding: 80px 50px;
+  background: #111;
+}
+.proyectos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.proyecto {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.proyecto img {
+  width: 100%;
+  transition: transform 0.4s;
+}
+.proyecto:hover img {
+  transform: scale(1.1);
+}
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0,0,0,0.8);
+  width: 100%;
+  text-align: center;
+  color: white;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.proyecto:hover .overlay {
+  opacity: 1;
+}
+
+/* CONTACTO */
+.contacto {
+  padding: 80px 50px;
+  background: #0f0f0f;
+  text-align: center;
+}
+.form-contacto {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: auto;
+  gap: 15px;
+}
+.form-contacto input,
+.form-contacto textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+.form-contacto button {
+  background: var(--color-principal);
+  border: none;
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.form-contacto button:hover {
+  background: var(--color-secundario);
+}
+.redes img {
+  width: 30px;
+  margin: 10px;
+  transition: 0.3s;
+}
+.redes img:hover {
+  transform: scale(1.2);
+}
+
+/* FOOTER */
+footer {
+  background: #000;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+}
