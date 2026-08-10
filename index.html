@@ -3,97 +3,354 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NIVEK SERVICES | Análisis de Datos y Desarrollo Web</title>
+  <meta name="description" content="Kevin Garcia — Analista de Datos y desarrollador Python. Portafolio de proyectos en Python, Pandas, Excel, Power BI y desarrollo web.">
+  <meta name="theme-color" content="#07111f">
+  <title>Kevin Garcia | Data & Python Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script defer src="script.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <!-- NAVBAR -->
-  <header class="navbar">
-    <div class="logo">NIVEK<span>SERVICES</span></div>
-    <nav>
-      <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#nosotros">Nosotros</a></li>
-        <li><a href="#portafolio">Portafolio</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
+  <div class="background-grid" aria-hidden="true"></div>
+  <div class="tech-network" aria-hidden="true"></div>
+
+  <header class="navbar" id="navbar">
+    <a class="brand" href="#inicio" aria-label="NIVEK Services - inicio">
+      <span class="brand-mark">N</span>
+      <span>NIVEK<span class="brand-accent">.</span></span>
+    </a>
+
+    <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="nav-links" aria-label="Navegación principal">
+      <a href="#inicio">Inicio</a>
+      <a href="#habilidades">Habilidades</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#perfil">Perfil</a>
+      <a href="#contacto">Contacto</a>
     </nav>
   </header>
 
-  <!-- HERO SECTION -->
-  <section id="inicio" class="hero">
-    <div class="hero-content">
-      <h1>Soluciones Inteligentes en <span>Análisis de Datos</span> y <span>Desarrollo Web</span></h1>
-      <p>Potenciamos tu negocio con tecnología avanzada: Power BI, Python, HTML y más.</p>
-      <a href="#servicios" class="btn">Descubre Más</a>
-    </div>
-  </section>
+  <main>
+    <!-- ==================== HERO ==================== -->
+    <section id="inicio" class="hero section-shell">
+      <div class="hero-copy reveal">
+        <div class="eyebrow">
+          <span class="status-dot"></span>
+          Disponible para oportunidades remotas
+        </div>
 
-  <!-- SERVICIOS -->
-  <section id="servicios" class="servicios">
-    <h2>Nuestros Servicios</h2>
-    <div class="servicios-container">
-      <div class="servicio-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/2103/2103633.png" alt="Power BI">
-        <h3>Power BI & Excel</h3>
-        <p>Diseño de dashboards interactivos, reportes automáticos y análisis de datos empresariales.</p>
-      </div>
-      <div class="servicio-card">
-        <img src="https://www.pngfind.com/pngs/m/683-6834215_html-css-js-icon-hd-png-download.png" alt="HTML Web">
-        <h3>Desarrollo Web</h3>
-        <p>Diseños web modernos y responsivos con HTML, CSS, JavaScript y frameworks actuales.</p>
-      </div>
-      <div class="servicio-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" alt="Python">
-        <h3>Aplicaciones en Python</h3>
-        <p>Automatización, análisis de datos, aplicaciones en escritorio y APIs.</p>
-      </div>
-      <div class="servicio-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/906/906324.png" alt="VS Code">
-        <h3>Consultoría y Soporte</h3>
-        <p>Asesoramiento técnico, configuración de entornos de desarrollo y optimización de procesos.</p>
-      </div>
-    </div>
-  </section>
+        <p class="kicker">KEVIN GARCIA · DATA &amp; PYTHON</p>
 
-  <!-- SOBRE NOSOTROS -->
-  <section id="nosotros" class="nosotros">
-    <h2>Sobre Nosotros</h2>
-    <p>En <strong>NIVEK SERVICES</strong>, somos un equipo apasionado por la tecnología y la innovación. 
-      Nuestra misión es ofrecer soluciones digitales avanzadas que impulsen la eficiencia y el crecimiento de tu empresa.</p>
-  </section>
+        <h1>
+          Convierto datos en <span>soluciones útiles.</span>
+        </h1>
 
-  <!-- PORTAFOLIO -->
-  <section id="portafolio" class="portafolio">
-    <h2>Proyectos Destacados</h2>
-    <div class="proyectos">
-      <div class="proyecto"><img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" alt="Proyecto BI"><div class="overlay"><p>Dashboard en Power BI para empresa financiera</p></div></div>
-      <div class="proyecto"><img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d" alt="Proyecto Web"><div class="overlay"><p>Sitio web corporativo HTML + CSS</p></div></div>
-      <div class="proyecto"><img src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2" alt="Proyecto Python"><div class="overlay"><p>Automatización de reportes con Python</p></div></div>
-    </div>
-  </section>
+        <p class="hero-text">
+          Analista de datos en formación y desarrollador Python. Construyo dashboards,
+          automatizaciones y herramientas digitales enfocadas en transformar información
+          en decisiones.
+        </p>
 
-  <!-- CONTACTO -->
-  <section id="contacto" class="contacto">
-    <h2>Contáctanos</h2>
-    <form class="form-contacto">
-      <input type="text" placeholder="Tu Nombre" required>
-      <input type="email" placeholder="Tu Correo" required>
-      <textarea placeholder="Mensaje..." required></textarea>
-      <button type="submit">Enviar Mensaje</button>
-    </form>
-    <div class="redes">
-      <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
-      <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="LinkedIn"></a>
-      <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram"></a>
-    </div>
-  </section>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#proyectos">
+            Ver proyectos <span>↗</span>
+          </a>
+          <a class="btn btn-ghost" href="#contacto">Hablemos</a>
+        </div>
+
+        <div class="quick-stats" aria-label="Resumen de habilidades">
+          <div>
+            <strong>Python</strong>
+            <span>Pandas · APIs · Apps</span>
+          </div>
+          <div>
+            <strong>Data</strong>
+            <span>Excel · Power BI · KPIs</span>
+          </div>
+          <div>
+            <strong>Web</strong>
+            <span>HTML · CSS · JavaScript</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-panel reveal">
+        <div class="terminal-bar">
+          <span></span>
+          <span></span>
+          <span></span>
+          <small>nivek.py</small>
+        </div>
+
+        <div class="terminal-body">
+          <p><span class="code-muted">$</span> python workforce_dashboard.py</p>
+          <p class="code-success">✓ Archivo cargado correctamente</p>
+          <p><span class="code-key">Total agentes:</span> 30</p>
+          <p><span class="code-key">Total llamadas:</span> 90,376</p>
+          <p><span class="code-key">Total ventas:</span> 5,969</p>
+          <p><span class="code-key">SLA promedio:</span> 87.35%</p>
+          <p class="cursor-line">▌</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== HABILIDADES ==================== -->
+    <section id="habilidades" class="section section-alt">
+      <div class="section-shell">
+        <div class="section-heading reveal">
+          <p class="kicker">STACK</p>
+          <h2>Herramientas que utilizo para construir soluciones.</h2>
+          <p>
+            Una combinación práctica de análisis, automatización y desarrollo para resolver
+            problemas de negocio.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-card reveal">
+            <span class="skill-icon">PY</span>
+            <h3>Python</h3>
+            <p>Automatización, análisis de datos, aplicaciones de escritorio y APIs.</p>
+            <div class="tags">
+              <span>Pandas</span>
+              <span>Matplotlib</span>
+              <span>Tkinter</span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal">
+            <span class="skill-icon">EX</span>
+            <h3>Excel &amp; Data</h3>
+            <p>Limpieza, organización, fórmulas, reportes y transformación de información operativa.</p>
+            <div class="tags">
+              <span>Excel</span>
+              <span>KPIs</span>
+              <span>Data Cleaning</span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal">
+            <span class="skill-icon">BI</span>
+            <h3>Power BI</h3>
+            <p>Visualización de indicadores y construcción de reportes orientados a negocio.</p>
+            <div class="tags">
+              <span>Dashboards</span>
+              <span>Reporting</span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal">
+            <span class="skill-icon">&lt;/&gt;</span>
+            <h3>Web &amp; Git</h3>
+            <p>Interfaces responsivas, JavaScript, APIs y control de versiones con Git/GitHub.</p>
+            <div class="tags">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>Git</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PROYECTOS ==================== -->
+    <section id="proyectos" class="section">
+      <div class="section-shell">
+        <div class="section-heading split reveal">
+          <div>
+            <p class="kicker">PORTAFOLIO</p>
+            <h2>Proyectos que demuestran lo que sé hacer.</h2>
+          </div>
+          <a class="text-link" href="https://github.com/kevinho22-l" target="_blank" rel="noopener noreferrer">
+            Ver GitHub ↗
+          </a>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Proyecto principal -->
+          <article class="project-card project-featured reveal">
+            <div class="project-image project-main-image">
+              <img
+                src="https://raw.githubusercontent.com/kevinho22-l/Workforce-Dashboard/main/images/kpisranking.png"
+                alt="Workforce Performance Dashboard con KPIs y ranking de agentes"
+                loading="lazy"
+              >
+              <span class="project-badge">Proyecto destacado</span>
+            </div>
+
+            <div class="project-body">
+              <div class="project-meta">Python · Pandas · Matplotlib · Tkinter · Excel</div>
+              <h3>Workforce Performance Dashboard</h3>
+              <p>
+                Dashboard interactivo para analizar productividad y rendimiento operativo.
+                Incluye limpieza de datos, KPIs, visualizaciones y ranking de agentes.
+              </p>
+
+              <div class="project-actions">
+                <a
+                  class="btn btn-small btn-primary"
+                  href="https://github.com/kevinho22-l/Workforce-Dashboard"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Código en GitHub ↗
+                </a>
+                <a
+                  class="btn btn-small btn-ghost"
+                  href="https://github.com/kevinho22-l/Workforce-Dashboard#readme"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Ver README
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Columna lateral: NIVEK -->
+          <article class="project-card project-side reveal">
+            <div class="project-gallery project-gallery-nivek">
+              <img src="images/Nivek2.png" alt="NIVEK Services - vista del proyecto" loading="lazy">
+            </div>
+
+            <div class="project-body">
+              <div class="project-meta">HTML · CSS · JavaScript · Node.js</div>
+              <h3>NIVEK Services</h3>
+              <p>
+                Plataforma personal para presentar habilidades, proyectos y servicios digitales,
+                con backend para contacto y persistencia de datos mediante Neon PostgreSQL.
+              </p>
+
+              <div class="tags">
+                <span>Responsive</span>
+                <span>Node.js</span>
+                <span>Express</span>
+                <span>Neon</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Columna lateral: análisis Excel -->
+          <article class="project-card project-side reveal">
+            <div class="project-gallery project-gallery-excel">
+              <img src="images/excel1.png" alt="Análisis de datos en Excel - resumen" loading="lazy">
+              <img src="images/excel2.png" alt="Análisis de datos en Excel - ranking y gráficos" loading="lazy">
+              <img src="images/excel3.png" alt="Análisis de datos en Excel - indicadores" loading="lazy">
+            </div>
+
+            <div class="project-body">
+              <div class="project-meta">Excel · Data Analysis · KPIs · Reporting</div>
+              <h3>Análisis de datos y reporting operativo</h3>
+              <p>
+                Análisis exploratorio realizado a partir de datos operativos para identificar
+                tendencias, indicadores, rendimiento y oportunidades de mejora.
+              </p>
+
+              <div class="tags">
+                <span>KPIs</span>
+                <span>Dashboards</span>
+                <span>Excel</span>
+                <span>Reporting</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PERFIL ==================== -->
+    <section id="perfil" class="section section-alt">
+      <div class="section-shell profile-grid">
+        <div class="section-heading reveal">
+          <p class="kicker">PERFIL</p>
+          <h2>Orientado a aprender, construir y mejorar.</h2>
+        </div>
+
+        <div class="profile-copy reveal">
+          <p>
+            Mi enfoque combina análisis de datos con desarrollo de soluciones prácticas.
+            Me interesa convertir procesos manuales y datos dispersos en herramientas que
+            sean fáciles de entender y utilizar.
+          </p>
+
+          <p>
+            Actualmente estoy fortaleciendo mi perfil en Python, análisis de datos, SQL,
+            visualización y desarrollo de aplicaciones, mientras construyo proyectos que
+            puedan demostrar estas habilidades de forma concreta.
+          </p>
+
+          <div class="profile-highlights">
+            <div><strong>01</strong><span>Analizar</span></div>
+            <div><strong>02</strong><span>Automatizar</span></div>
+            <div><strong>03</strong><span>Visualizar</span></div>
+            <div><strong>04</strong><span>Mejorar</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CONTACTO ==================== -->
+    <section id="contacto" class="section contact-section">
+      <div class="section-shell contact-grid">
+        <div class="section-heading reveal">
+          <p class="kicker">CONTACTO</p>
+          <h2>¿Tienes una oportunidad o proyecto?</h2>
+          <p>
+            Estoy abierto a oportunidades laborales remotas y proyectos relacionados con datos,
+            automatización y desarrollo.
+          </p>
+
+          <div class="social-links">
+            <a href="https://github.com/kevinho22-l" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+          </div>
+        </div>
+
+        <form class="form-contacto reveal" id="contact-form">
+          <label>
+            Nombre
+            <input name="nombre" type="text" placeholder="Tu nombre" autocomplete="name" required>
+          </label>
+
+          <label>
+            Correo
+            <input name="correo" type="email" placeholder="tu@email.com" autocomplete="email" required>
+          </label>
+
+          <label>
+            Mensaje
+            <textarea name="mensaje" placeholder="Cuéntame en qué puedo ayudarte..." rows="5" required></textarea>
+          </label>
+
+          <button class="btn btn-primary" type="submit">
+            <span class="button-text">Enviar mensaje</span>
+            <span class="button-loader" aria-hidden="true">Enviando...</span>
+          </button>
+
+          <p class="form-status" id="form-status" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    <p>© 2025 NIVEK SERVICES. Todos los derechos reservados.</p>
+    <div class="section-shell footer-inner">
+      <div>
+        <strong>NIVEK<span>.</span></strong>
+        <p>Data · Python · Web</p>
+      </div>
+      <p>© <span id="year"></span> Kevin Garcia. Todos los derechos reservados.</p>
+    </div>
   </footer>
 </body>
 </html>
