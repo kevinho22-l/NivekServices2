@@ -1,4 +1,4 @@
- const { neon } = require('@netlify/neon');
+const { neon } = require('@netlify/neon');
 
 const sql = neon();
 
@@ -20,6 +20,7 @@ exports.handler = async (event) => {
       statusCode: 405,
       headers: {
         'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
       },
       body: JSON.stringify({
         success: false,
@@ -31,11 +32,17 @@ exports.handler = async (event) => {
   try {
     const { nombre, correo, mensaje } = JSON.parse(event.body || '{}');
 
-    if (!nombre?.trim() || !correo?.trim() || !mensaje?.trim()) {
+    const nombreLimpio = nombre?.trim();
+    const correoLimpio = correo?.trim();
+    const mensajeLimpio = mensaje?.trim();
+
+    // Validar campos obligatorios
+    if (!nombreLimpio || !correoLimpio || !mensajeLimpio) {
       return {
         statusCode: 400,
         headers: {
           'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*',
         },
         body: JSON.stringify({
           success: false,
@@ -44,6 +51,43 @@ exports.handler = async (event) => {
       };
     }
 
+    // Limitar el tamaño de los datos recibidos
+    if (
+      nombreLimpio.length > 100 ||
+      correoLimpio.length > 254 ||
+      mensajeLimpio.length > 2000
+    ) {
+      return {
+        statusCode: 400,
+        headers: {
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*',
+        },
+        body: JSON.stringify({
+          success: false,
+          message: 'Uno de los campos supera el límite permitido.',
+        }),
+      };
+    }
+
+    // Validación básica del correo electrónico
+    const correoValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!correoValido.test(correoLimpio)) {
+      return {
+        statusCode: 400,
+        headers: {
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*',
+        },
+        body: JSON.stringify({
+          success: false,
+          message: 'Ingresa un correo electrónico válido.',
+        }),
+      };
+    }
+
+    // Crear la tabla si todavía no existe
     await sql`
       CREATE TABLE IF NOT EXISTS mensajes (
         id SERIAL PRIMARY KEY,
@@ -54,9 +98,10 @@ exports.handler = async (event) => {
       )
     `;
 
+    // Guardar el mensaje
     await sql`
       INSERT INTO mensajes (nombre, correo, mensaje)
-      VALUES (${nombre.trim()}, ${correo.trim()}, ${mensaje.trim()})
+      VALUES (${nombreLimpio}, ${correoLimpio}, ${mensajeLimpio})
     `;
 
     return {
