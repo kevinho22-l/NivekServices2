@@ -332,6 +332,17 @@
             <textarea name="mensaje" placeholder="Cuéntame en qué puedo ayudarte..." rows="5" required></textarea>
           </label>
 
+          <div class="honeypot" aria-hidden="true">
+  <label for="website">Website</label>
+  <input
+    type="text"
+    id="website"
+    name="website"
+    tabindex="-1"
+    autocomplete="off"
+  >
+</div>
+
           <button class="btn btn-primary" type="submit">
             <span class="button-text">Enviar mensaje</span>
             <span class="button-loader" aria-hidden="true">Enviando...</span>
